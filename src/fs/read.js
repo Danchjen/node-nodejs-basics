@@ -1,7 +1,7 @@
 import fs from "fs";
 
 const read = async () => {
-  const file = "files/fileToRead.txt";
+  const file = "src/fs/files/fileToRead.txt";
 
   fs.access(file, fs.constants.F_OK, (err) => {
     if (err) {

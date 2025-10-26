@@ -1,7 +1,7 @@
 import fs from "fs";
 
 const list = async () => {
-  const dir = "files";
+  const dir = "src/fs/files";
 
   fs.access(dir, fs.constants.F_OK, (err) => {
     if (err) {

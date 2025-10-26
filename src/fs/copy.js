@@ -1,8 +1,8 @@
 import fs from "fs";
 
 const copy = async () => {
-  const srcFolder = "files";
-  const destFolder = "files_copy";
+  const srcFolder = "src/fs/files";
+  const destFolder = "src/fs/files_copy";
 
   fs.access(srcFolder, fs.constants.F_OK, (err) => {
     if (err) throw new Error("FS operation failed");

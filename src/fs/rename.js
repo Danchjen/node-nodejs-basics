@@ -1,22 +1,22 @@
 import fs from "fs";
 
 const rename = async () => {
-  const wrongFilename = "wrongFilename.txt";
-  const properFilename = "properFilename.md";
+  const wrongFilename = "src/fs/files/wrongFilename.txt";
+  const properFilename = "src/fs/files/properFilename.md";
 
-  fs.access(`files/${wrongFilename}`, fs.constants.F_OK, (err) => {
+  fs.access(`${wrongFilename}`, fs.constants.F_OK, (err) => {
     if (err) {
       throw new Error(`FS operation failed`);
     }
   });
 
-  fs.access(`files/${properFilename}`, fs.constants.F_OK, (err) => {
+  fs.access(`${properFilename}`, fs.constants.F_OK, (err) => {
     if (!err) {
       throw new Error(`FS operation failed`);
     }
   });
 
-  fs.rename(`files/${wrongFilename}`, `files/${properFilename}`, (err) => {
+  fs.rename(`${wrongFilename}`, `${properFilename}`, (err) => {
     if (err) {
       throw new Error("FS operation failed");
     }
